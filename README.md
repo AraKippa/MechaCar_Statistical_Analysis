@@ -7,12 +7,18 @@ Our slope of the linear model is considered to be close to zero. Our estimated s
 Per our multiple R squared value of 0.7149 and a p-value of 5.35e-11 this linear model appears to predict mpg of MechaCar prototypes effectively. However, there are only two variables which have significant variance in our data set. Indicating over half our independent variables have no affect on mpg.  This makes this model look like a poor predictor for MechaCar prototypes.
 
 ## Summary Statistics on Suspension Coils
-write a short summary using screenshots from your total_summary and lot_summary dataframes, and address the following question:
 
-The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
+The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. If we are to interpret Lot three as the current manufacturing data; it does not meet this design specification.
+If we are looking at the total manufacturing data, we are within parameters. ![total_summary](Total_Summary.png) The variance is 62, well within our 100 pound threshold.  
+There is a disturbing trend though, once we start breaking down the data by [Lot Summary](Lot_Summary). The variance level on Lot three exceeds our 100 pounds per square inch parameter. There was a 662% increase in variance from Lot one to Lot two and an astounding 2176% increase from Lot two to Lot three.  
+A re-evaluation of our Suspension coils process should begin immediately.
 
 ## T-Tests on Suspension Coils
-summarize your interpretation and findings for the t-test results. Include screenshots of the t-test to support your summary.
+
+Across all lots they hypothesis that our true mean is equal to 1500 is failing with a p-value of 1.  This does not meet our standard of 0.05.
+The issue again points to [Lot Three](Lot3meanT.PNG) with a mean of x 1496.14 and confidence interval also below the mean on both sides.
+There is some encouraging data from  data from [Lot One](Lot1meanT.PNG).  This continues to [Lot Two](Lot2meanT.PNG). Although you can see the mean skewing upwards; our confidence interval includes our expected mean with relatively low variance.
+
 
 ## Study Design: MechaCar vs Competition
 Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
